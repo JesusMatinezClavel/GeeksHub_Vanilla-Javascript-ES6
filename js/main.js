@@ -482,46 +482,46 @@
 // en que cada objeto contiene toda la información de cada persona.
 
 
-let person = [
-    person1 = {
-        name: "xuso",
-        surname: "Martinez"
-    },
-    person2 = {
-        name: "manuel",
-        surname: "Lopera"
-    },
-    person3 = {
-        name: "Daniel",
-        surname: "Robles"
-    }
-]
+// let person = [
+//     person1 = {
+//         name: "xuso",
+//         surname: "Martinez"
+//     },
+//     person2 = {
+//         name: "manuel",
+//         surname: "Lopera"
+//     },
+//     person3 = {
+//         name: "Daniel",
+//         surname: "Robles"
+//     }
+// ]
 
-let personInfo = [
-    personInfo1 = {
-        age: 13,
-        addres: "fakeStreet"
-    },
-    personInfo2 = {
-        age: 36,
-        addres: "SesameSt"
-    },
-    personInfo3 = {
-        age: 31,
-        addres: "Landlandia"
-    }
-]
+// let personInfo = [
+//     personInfo1 = {
+//         age: 13,
+//         addres: "fakeStreet"
+//     },
+//     personInfo2 = {
+//         age: 36,
+//         addres: "SesameSt"
+//     },
+//     personInfo3 = {
+//         age: 31,
+//         addres: "Landlandia"
+//     }
+// ]
 
-const ejercicio = (object1, object2) => {
-    let personTemp = []
-    for (let i = 0; i < object1.length; i++) {
-        personTemp[i] = { ...object1[i], ...object2[i] }
-    }
-    console.log(personTemp)
-}
+// const ejercicio = (object1, object2) => {
+//     let personTemp = []
+//     for (let i = 0; i < object1.length; i++) {
+//         personTemp[i] = { ...object1[i], ...object2[i] }
+//     }
+//     console.log(personTemp)
+// }
 
 
-ejercicio(person, personInfo)
+// ejercicio(person, personInfo)
 
 
 
@@ -529,17 +529,64 @@ ejercicio(person, personInfo)
 // objetos excluyendo la edad de la persona. Es decir, debo ver todas las propiedades de cada objeto
 // menos la edad. Hazlo utilizando el operador ...
 
+// let person = [
+//     person1 = {
+//         name: "xuso",
+//         surname: "Martinez"
+//     },
+//     person2 = {
+//         name: "manuel",
+//         surname: "Lopera"
+//     },
+//     person3 = {
+//         name: "Daniel",
+//         surname: "Robles"
+//     }
+// ]
+
+// let personInfo = [
+//     personInfo1 = {
+//         age: 13,
+//         addres: "fakeStreet"
+//     },
+//     personInfo2 = {
+//         age: 36,
+//         addres: "SesameSt"
+//     },
+//     personInfo3 = {
+//         age: 31,
+//         addres: "Landlandia"
+//     }
+// ]
+
+// const ejercicio = (object1, object2) => {
+//     let personTemp = []
+//     let personTemp2 = []
+//     for (let i = 0; i < object1.length; i++) {
+//         personTemp[i] = { ...object1[i], ...object2[i] }
+//     }
+//     for (const element of personTemp) {
+//         let {age,...notAge} = element
+//         console.log(notAge)
+//     }
+
+// }
 
 
+// ejercicio(person, personInfo)
 
 
 
 // 24. Dado el array de nombres ["mara", "pAblo", "juan", "MARCOS"], devuelve otro en que la
 // primera letra de cada uno sea mayúscula y el resto minúsculas
 
+let names = ["mara", "pAblo", "juan", "MARCOS"]
 
+const ejercicio = (list) => {
 
+}
 
+ejercicio(names)
 
 
 // 25. Crea un array con únicamente los nombres de los siguientes objetos
