@@ -369,47 +369,83 @@
 // 17. Crea una función reloj que vaya desde las 23:58:00 hasta las 00:00:00 y saque por consola
 // cada segundo y minuto entre ambas.
 
-let time = [12, 58, 0]
-let [hours, minutes, seconds] = time
+// let time = [12, 58, 0]
+// let [hours, minutes, seconds] = time
 
-const ejercicio = () => {
-    while ((hours !== 0) || (minutes !== 0) || (seconds !== 0)) {
-        seconds != 59
-            ? (seconds++)
-            : (seconds = 0, minutes != 59)
-                ? (minutes++)
-                : (minutes = 0, hours != 23
-                    ? hours++
-                    : hours = 0)
-        time = [hours,minutes,seconds]
-        console.log(time.join(":"))
-    }
-}
+// const ejercicio = () => {
+//     while ((hours !== 0) || (minutes !== 0) || (seconds !== 0)) {
+//         seconds != 59
+//             ? (seconds++)
+//             : (seconds = 0, minutes != 59)
+//                 ? (minutes++)
+//                 : (minutes = 0, hours != 23
+//                     ? hours++
+//                     : hours = 0)
+//         time = [hours,minutes,seconds]
+//         console.log(time.join(":"))
+//     }
+// }
 
-ejercicio()
-
-
+// ejercicio()
 
 
 // 18. Escribe una función que compruebe si un objeto tiene determinada propiedad (pasando como
 // parámetro el objeto y la propiedad en cuestión)
 
+// let person = {
+//     nombre: "jesus",
+//     edad: 31,
+//     pelo: "corto",
+//     ojos: 2,
+// }
 
+// const ejercicio = (object, property1, property2) => {
+//     entries = Object.entries(object)
+//     for (const [key, value] of entries) {
+//         key === property1
+//             ? console.log(`si está la key ${property1}`)
+//             : console.log(`no está la key ${property1}`)
+//         value === property2
+//             ? console.log(`si está el value ${property2}`)
+//             : console.log(`no está el value ${property2}`)
+//     }
+// }
 
-
+// ejercicio(person, "nombre","corto")
 
 
 // 19. Escribe una función que sume todos sus argumentos, independientemente de cuántos sean
 
+// const ejercicio = (...numbers) => {
+//     let res = 0
+//     for (const number of numbers) {
+//         res += number        
+//     }
+//     return res
+// }
 
 
+// console.log(ejercicio(2,3,5))
 
 
 
 // 20. Escribe una función que me diga si un alumno está aprobado o no, a la cual puedo pasar
 // cualquier cantidad de notas como parámetro
 
+// const ejercicio = (...grades) => {
+//     let totalG = 0
+//     let numberG = 0
+//     for (const grade of grades) {
+//         totalG += grade
+//         numberG++
+//     }
+//     media = totalG / numberG
+//     return media >= 5
+//         ? `La nota media del alumno es de ${media.toFixed(2)}, por lo que está aprobado`
+//         : `La nota media del alumno es de ${media.toFixed(2)}, por lo que está suspendido`
+// }
 
+// console.log(ejercicio(2, 4, 6, 7, 5, 5, 5, 5))
 
 
 
@@ -418,6 +454,24 @@ ejercicio()
 // entre el número más alto y el más bajo del mismo. Utiliza el operador ...
 
 
+
+const ejercicio = (...numbers) => {
+    let list = Array.from(numbers)
+    compMax = 0
+    compMin = list[0]
+    list.forEach(element => {
+        element > compMax
+            ? compMax = element
+            : null
+        element < compMin
+            ? compMin = element
+            : null
+    });
+    dif = compMax - compMin
+    return `El número máximo es ${compMax}, el mínimo es ${compMin} y la diferencia entre ellos es de ${dif}`
+}
+
+console.log(ejercicio(9, 4, 6, 7, 5, 7, 13, 6))
 
 
 
