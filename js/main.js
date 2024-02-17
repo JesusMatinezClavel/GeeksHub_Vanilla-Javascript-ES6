@@ -211,22 +211,36 @@
 // 10. Escribe una función que rellene un array con un determinado número de elementos y
 // pasa ambas cosas por parámetro. Es decir, la ejecución de rellenar(3, 4) sería [4, 4, 4]
 
-const ejercicio = (tamaño, contenido) => {
-    list = new Array(tamaño)
-    for (let i = 0; i < list.length; i++) {
-        list.splice(i,1,contenido)
-    }
-    return list
-}
+// const ejercicio = (tamaño, contenido) => {
+//     list = new Array(tamaño)
+//     for (let i = 0; i < list.length; i++) {
+//         list.splice(i,1,contenido)
+//     }
+//     return list
+// }
 
 
-console.log(ejercicio(7, 5))
+// console.log(ejercicio(7, 5))
 
 // 11. Escribe una función para intercambiar las posiciones de dos elementos en un array.
 
+// let list1 = [5, 35, 9, 64, 12]
+// let list2 = [65, 5, 99, 6, 62]
 
+// const ejercicio = (array1, array2, pos1, pos2) => {
+//     // console.log(array1)
+//     // console.log(array2)
+//     let temp
+//     pos1 <= array1.length && pos2 <= array2.length
+//         ? (temp = array1[pos1],
+//             array1.splice(pos1, 1, array2[pos2]),
+//             (array2.splice(pos2, 1, temp)))
+//         : null
+//     console.log(array1)
+//     console.log(array2)
+// }
 
-
+// ejercicio(list1, list2, 2, 4)
 
 
 // 12. Escribe una función que genere un array de números y pásale por parámetro el número inicial
@@ -234,6 +248,16 @@ console.log(ejercicio(7, 5))
 // deseado.
 
 
+// const ejercicio = (start, long) => {
+//     let num = Math.floor(Math.random() * 10)
+//     list = [start]
+//     for (let i = 0; i < long; i++) {
+//         list.push(list[i]+1)
+//     }
+//     return list
+// }
+
+// console.log(ejercicio(4,3))
 
 
 
@@ -242,13 +266,47 @@ console.log(ejercicio(7, 5))
 // ese array son números y devuelva la suma de los mismos.
 
 
+// let list1 = [`25`, "ey", true, 6, 62]
 
+
+// const ejercicio = (array) => {
+//     let add = 0
+//     let numbersIn = []
+//     let numbersPos = []
+//     array.forEach((element, index) => {
+//         // Number.isNaN(element)
+//         typeof (element) === "number"
+//             ? (add += element, numbersPos.push(index), numbersIn.push(element))
+//             : null
+//     });
+//     return `En el array list1 puedes encontrar ${numbersIn.length} números, en los índices ${numbersPos.join(" y ")}, siendo esos números el ${numbersIn.join(" y el ")} respectivamente`
+// }
+// console.log(ejercicio(list1))
 
 
 
 // 14. Escribe una función que determine la palabra más larga de una string
 
+// let list1 = [`hola`, "cuales", 'amarillo', 'suburbios', 'quisiera ser tan alta']
 
+
+// const ejercicio = (array) => {
+//     let tempL
+//     let longerW
+//     let tempN1 = 0
+//     let tempN2 = 0
+//     array.forEach(element => {
+//         tempL = Array.from(element)
+//         tempN1 = tempL.length
+//         tempN1 > tempN2
+//             ? (tempN2 = tempN1, longerW = element)
+//             : null
+//         tempN1 = 0
+//         tempL = []
+//     });
+//     return `La palabra más larga de este array es ${longerW}, con una longitud de ${tempN2} letras`
+// }
+// console.log(ejercicio(list1))
 
 
 
@@ -258,21 +316,77 @@ console.log(ejercicio(7, 5))
 
 
 
+// let color = 'amarillo'
+
+// const ejercicio = (word) => {
+//     let vocal = []
+//     let posV = []
+//     let res = []
+//     tempL = Array.from(word.toLowerCase())
+//     tempL.forEach((element, index) => {
+//         switch (true) {
+//             case element === "a":
+//             case element === "e":
+//             case element === "i":
+//             case element === "o":
+//             case element === "u":
+//                 vocal.push(element)
+//                 posV.push(index)
+//                 break;
+
+//             default:
+//                 break;
+//         }
+//     });
+//     for (let i = 0; i < vocal.length; i++) {
+//         res.push(vocal[i], " con el índice => ")
+//         res.push(posV[i],", ")
+//     }
+//     res = res.join("")
+//     return `En la palabra ${word} hay ${vocal.length} vocales, y son ${res}`
+// }
+
+// console.log(ejercicio(color))
+
 
 
 
 // 16. Crea una función que genere una contraseña aleatoria. Debes pasar por parámetro la cantidad
 // de caracteres que quieres que tenga la contraseña.
 
+// const ejercicio = (a) => {
+//     let passWord = []
+//     for (let i = 0; i < a; i++) {
+//         aleat = Math.floor(Math.random() * 10)
+//         passWord.push(aleat.toString())
+//     }
+//     return `La contraseña generada es ${passWord.join("-")}`
+// }
 
-
-
+// console.log(ejercicio(5))
 
 
 // 17. Crea una función reloj que vaya desde las 23:58:00 hasta las 00:00:00 y saque por consola
 // cada segundo y minuto entre ambas.
 
+let time = [12, 58, 0]
+let [hours, minutes, seconds] = time
 
+const ejercicio = () => {
+    while ((hours !== 0) || (minutes !== 0) || (seconds !== 0)) {
+        seconds != 59
+            ? (seconds++)
+            : (seconds = 0, minutes != 59)
+                ? (minutes++)
+                : (minutes = 0, hours != 23
+                    ? hours++
+                    : hours = 0)
+        time = [hours,minutes,seconds]
+        console.log(time.join(":"))
+    }
+}
+
+ejercicio()
 
 
 
