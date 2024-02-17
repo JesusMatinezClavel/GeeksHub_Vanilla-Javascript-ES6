@@ -455,23 +455,23 @@
 
 
 
-const ejercicio = (...numbers) => {
-    let list = Array.from(numbers)
-    compMax = 0
-    compMin = list[0]
-    list.forEach(element => {
-        element > compMax
-            ? compMax = element
-            : null
-        element < compMin
-            ? compMin = element
-            : null
-    });
-    dif = compMax - compMin
-    return `El número máximo es ${compMax}, el mínimo es ${compMin} y la diferencia entre ellos es de ${dif}`
-}
+// const ejercicio = (...numbers) => {
+//     let list = Array.from(numbers)
+//     compMax = 0
+//     compMin = list[0]
+//     list.forEach(element => {
+//         element > compMax
+//             ? compMax = element
+//             : null
+//         element < compMin
+//             ? compMin = element
+//             : null
+//     });
+//     dif = compMax - compMin
+//     return `El número máximo es ${compMax}, el mínimo es ${compMin} y la diferencia entre ellos es de ${dif}`
+// }
 
-console.log(ejercicio(9, 4, 6, 7, 5, 7, 13, 6))
+// console.log(ejercicio(9, 4, 6, 7, 5, 7, 13, 6))
 
 
 
@@ -482,7 +482,46 @@ console.log(ejercicio(9, 4, 6, 7, 5, 7, 13, 6))
 // en que cada objeto contiene toda la información de cada persona.
 
 
+let person = [
+    person1 = {
+        name: "xuso",
+        surname: "Martinez"
+    },
+    person2 = {
+        name: "manuel",
+        surname: "Lopera"
+    },
+    person3 = {
+        name: "Daniel",
+        surname: "Robles"
+    }
+]
 
+let personInfo = [
+    personInfo1 = {
+        age: 13,
+        addres: "fakeStreet"
+    },
+    personInfo2 = {
+        age: 36,
+        addres: "SesameSt"
+    },
+    personInfo3 = {
+        age: 31,
+        addres: "Landlandia"
+    }
+]
+
+const ejercicio = (object1, object2) => {
+    let personTemp = []
+    for (let i = 0; i < object1.length; i++) {
+        personTemp[i] = { ...object1[i], ...object2[i] }
+    }
+    console.log(personTemp)
+}
+
+
+ejercicio(person, personInfo)
 
 
 
