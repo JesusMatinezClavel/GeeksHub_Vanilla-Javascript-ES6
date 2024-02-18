@@ -660,19 +660,19 @@
 
 // 27. Dado un nombre completo (en string), obtén sus iniciales y sácalas también en una string
 
-const ejercicio = (name) => {
-    nameSpl = Array.from(name)
-    inicials = nameSpl[0] + "."
-    nameSpl.forEach((element, index) => {
-        nameSpl[index - 1] === " "
-            ? inicials += element + ". "
-            : null
-    });
-    inicials = inicials.toUpperCase()
-    console.log(inicials)
-}
+// const ejercicio = (name) => {
+//     nameSpl = Array.from(name)
+//     inicials = nameSpl[0] + "."
+//     nameSpl.forEach((element, index) => {
+//         nameSpl[index - 1] === " "
+//             ? inicials += element + ". "
+//             : null
+//     });
+//     inicials = inicials.toUpperCase()
+//     console.log(inicials)
+// }
 
-ejercicio("manuel lopera")
+// ejercicio("manuel lopera")
 
 
 // 28. Saca únicamente los nombres de los estudiantes que tengan una media por encima de 9
@@ -682,3 +682,30 @@ ejercicio("manuel lopera")
 // { nombre: 'Marcos', notas: [3, 5, 2, 8, 5] },
 // { nombre: 'Pablo', notas: [10, 10, 9, 8, 9] },
 // ];
+
+
+let estudiantes = [
+    { nombre: 'Mara', notas: [10, 7, 8, 8, 9] },
+    { nombre: 'David', notas: [6, 2, 5, 10, 7] },
+    { nombre: 'Marcos', notas: [3, 5, 2, 8, 5] },
+    { nombre: 'Pablo', notas: [10, 10, 9, 8, 9] },
+];
+
+const ejercicio = (array) => {
+    let betterStud = []
+    array.forEach(element => {
+        notas = ([element.notas]).flat()
+        // console.log(notas)
+        total = 0
+        notas.forEach(element => {
+            total += element
+        });
+        media = total / notas.length
+        media >= 9
+            ? betterStud.push(element.nombre)
+            : null
+    });
+    return `los estudiantes con una media superior al 9 son: ${betterStud.join(", ")}`
+}
+
+console.log(ejercicio(estudiantes))
