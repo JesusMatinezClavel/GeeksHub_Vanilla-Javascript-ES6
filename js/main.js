@@ -607,9 +607,27 @@
 // ];
 // Además, saca un array únicamente con los nombres de los mayores de 30
 
+let personas = [
+    { nombre: "Mara", edad: 30 },
+    { nombre: "Pablo", edad: 35 },
+    { nombre: "Juan", edad: 26 },
+    { nombre: "Marta", edad: 56 },
+    { nombre: "Rodrigo", edad: 31 },
+];
 
+const ejercicio = (array) => {
+    nameList = []
+    array.forEach(element => {
+        element.edad > 30
+            ? (Object.entries(element),
+                wordSpl = Object.entries(element).splice(0, 1),
+                nameList.push(Object.fromEntries(wordSpl)))
+            : null
+    });
+    console.log(nameList)
+}
 
-
+ejercicio(personas)
 
 
 // 26. Dado un array de números, crea una función que sume solo los pares
