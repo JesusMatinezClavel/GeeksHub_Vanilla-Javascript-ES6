@@ -607,41 +607,72 @@
 // ];
 // Además, saca un array únicamente con los nombres de los mayores de 30
 
-let personas = [
-    { nombre: "Mara", edad: 30 },
-    { nombre: "Pablo", edad: 35 },
-    { nombre: "Juan", edad: 26 },
-    { nombre: "Marta", edad: 56 },
-    { nombre: "Rodrigo", edad: 31 },
-];
+// let personas = [
+//     { nombre: "Mara", edad: 30 },
+//     { nombre: "Pablo", edad: 35 },
+//     { nombre: "Juan", edad: 26 },
+//     { nombre: "Marta", edad: 56 },
+//     { nombre: "Rodrigo", edad: 31 },
+// ];
 
-const ejercicio = (array) => {
-    nameList = []
-    array.forEach(element => {
-        element.edad > 30
-            ? (Object.entries(element),
-                wordSpl = Object.entries(element).splice(0, 1),
-                nameList.push(Object.fromEntries(wordSpl)))
-            : null
-    });
-    console.log(nameList)
-}
+// const ejercicio = (array) => {
+//     nameList = []
+//     array.forEach(element => {
+//         element.edad > 30
+//             ? (Object.entries(element),
+//                 wordSpl = Object.entries(element).splice(0, 1),
+//                 nameList.push(Object.fromEntries(wordSpl)))
+//             : null
+//     });
+//     console.log(nameList)
+// }
 
-ejercicio(personas)
+// ejercicio(personas)
 
 
 // 26. Dado un array de números, crea una función que sume solo los pares
 
+// let nums = [9, 4, 6, 7, 5, 7, 13, 6]
 
+// const ejercicio = (array) => {
+//     suma = 0
+//     array.forEach(element => {
+//         element % 2 === 0
+//             ? suma += element
+//             : null
+//     });
+//     return suma
+// }
+// const ejercicio = (...nums) => {
+//     numsL = [...nums]
+//     suma = 0
+//     numsL.forEach(element => {
+//         element % 2 === 0
+//             ? suma += element
+//             : null
+//     });
+//     return suma
+// }
 
+// console.log(ejercicio(nums))
 
 
 
 // 27. Dado un nombre completo (en string), obtén sus iniciales y sácalas también en una string
 
+const ejercicio = (name) => {
+    nameSpl = Array.from(name)
+    inicials = nameSpl[0] + "."
+    nameSpl.forEach((element, index) => {
+        nameSpl[index - 1] === " "
+            ? inicials += element + ". "
+            : null
+    });
+    inicials = inicials.toUpperCase()
+    console.log(inicials)
+}
 
-
-
+ejercicio("manuel lopera")
 
 
 // 28. Saca únicamente los nombres de los estudiantes que tengan una media por encima de 9
