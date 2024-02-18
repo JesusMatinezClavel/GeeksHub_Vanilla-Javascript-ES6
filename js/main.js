@@ -580,13 +580,21 @@
 // 24. Dado el array de nombres ["mara", "pAblo", "juan", "MARCOS"], devuelve otro en que la
 // primera letra de cada uno sea mayúscula y el resto minúsculas
 
-let names = ["mara", "pAblo", "juan", "MARCOS"]
+// let names = ["mara", "pAblo", "juan", "MARCOS"]
 
-const ejercicio = (list) => {
+// const ejercicio = (array) => {
+//     for (let i = 0; i < array.length; i++) {
+//         wordSep = Array.from(array[i])
+//         for (let i = 0; i < wordSep.length; i++) {
+//             wordSep[i] = wordSep[i].toLowerCase()
+//             wordSep[0] = wordSep[0].toUpperCase()
+//         }
+//         array.splice(i,1,wordSep.join(""))
+//     }
+//     console.log(array)
+// }
 
-}
-
-ejercicio(names)
+// ejercicio(names)
 
 
 // 25. Crea un array con únicamente los nombres de los siguientes objetos
